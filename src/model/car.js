@@ -11,11 +11,11 @@ let CarSchema = new Schema({
     required: true
   },
   price: {
-    type: Double,
+    type: Number,
     required: true
   },
   "last price":{
-    type: Double,
+    type: Number,
     required: true
   },
   "current owner": [{type: Schema.Types.ObjectId, ref: 'Owner'}],

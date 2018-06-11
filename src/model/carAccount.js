@@ -6,7 +6,7 @@ let Account = new Schema({
   email: String,
   password: String,
   money: {
-    type: Double,
+    type: Number,
     required: true
   },
   "car": [{type: Schema.Types.ObjectId, ref: 'Car'}],
