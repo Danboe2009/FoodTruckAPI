@@ -12,5 +12,5 @@ let CarAccount = new Schema({
   "car": [{type: Schema.Types.ObjectId, ref: 'Car'}],
 });
 
-Account.plugin(passportLocalMongoose);
+CarAccount.plugin(passportLocalMongoose);
 module.exports = mongoose.model('CarAccount', CarAccount);
