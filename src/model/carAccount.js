@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 import passportLocalMongoose from 'passport-local-mongoose';
 
-let Account = new Schema({
+let CarAccount = new Schema({
   email: String,
   password: String,
   money: {
@@ -13,4 +13,4 @@ let Account = new Schema({
 });
 
 Account.plugin(passportLocalMongoose);
-module.exports = mongoose.model('Account', Account);
+module.exports = mongoose.model('CarAccount', CarAccount);
