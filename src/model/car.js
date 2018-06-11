@@ -18,8 +18,8 @@ let CarSchema = new Schema({
     type: Number,
     required: true
   },
-  "current owner": [{type: Schema.Types.ObjectId, ref: 'Owner'}],
-  "last owner": [{type: Schema.Types.ObjectId, ref: 'Owner'}]
+  "current owner": [{type: Schema.Types.ObjectId, ref: 'Account'}],
+  "last owner": [{type: Schema.Types.ObjectId, ref: 'Account'}]
 
   });
 
