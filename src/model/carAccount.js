@@ -5,10 +5,7 @@ import passportLocalMongoose from 'passport-local-mongoose';
 let CarAccount = new Schema({
   email: String,
   password: String,
-  money: {
-    type: Number,
-    required: true
-  },
+  money: Number,
   "car": [{type: Schema.Types.ObjectId, ref: 'Car'}],
 });
 
