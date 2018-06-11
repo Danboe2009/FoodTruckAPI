@@ -32,18 +32,17 @@ export default({ config, db }) => {
 
   // '/v1/foodtruck/add' - POST - add a food truck
   api.post('/add', authenticate, (req, res) => {
-    let newFoodTruck = new FoodTruck();
-    newFoodTruck.name = req.body.name;
-    newFoodTruck.foodtype = req.body.foodtype;
-    newFoodTruck.avgcost = req.body.avgcost;
-    newFoodTruck.geometry.coordinates.lat = req.body.geometry.coordinates.lat;
-    newFoodTruck.geometry.coordinates.long = req.body.geometry.coordinates.long;
+    let newCar = new Car();
+    newCar.car = req.body.car;
+    newCar.model = req.body.model;
+    newCar.price = req.body.price;
+    newCar.lastprice = req.body.lastprice;
 
-    newFoodTruck.save(function(err) {
+    neCar.save(function(err) {
       if (err) {
         res.send(err);
       }
-      res.json({ message: 'Food Truck saved successfully' });
+      res.json({ message: 'Car created successfully' });
     });
   });
 
