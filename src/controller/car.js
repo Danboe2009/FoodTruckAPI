@@ -38,7 +38,7 @@ export default({ config, db }) => {
     newCar.price = req.body.price;
     newCar.lastprice = req.body.lastprice;
 
-    neCar.save(function(err) {
+    newCar.save(function(err) {
       if (err) {
         res.send(err);
       }
