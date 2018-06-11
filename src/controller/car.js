@@ -10,13 +10,13 @@ import { authenticate } from '../middleware/authMiddleware';
 export default({ config, db }) => {
   let api = Router();
 
-  // '/v1/foodtruck' - GET all food trucks
+  // '/v1/car' - GET all food trucks
   api.get('/', (req, res) => {
-    FoodTruck.find({}, (err, foodtrucks) => {
+    Car.find({}, (err, car) => {
       if (err) {
         res.send(err);
       }
-      res.json(foodtrucks);
+      res.json(car);
     });
   });
 
